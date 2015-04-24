@@ -69,6 +69,7 @@ module.exports = function(grunt) {
       var p;
       options = options || {};
       _text.push('CACHE MANIFEST');
+      _text.push(' ');
       _text.push('# ' + new Date());
       _text.push('CACHE:');
       for (p in files) {
