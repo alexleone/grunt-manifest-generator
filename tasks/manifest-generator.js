@@ -302,7 +302,7 @@ module.exports = function(grunt) {
           //自动将对应的html文件加上或者改写manifest文件的地址
           htmlSourceList.forEach(function(item){
               var _path = Util.getRelativePath(item.path, manifestfile);
-              item.content= item.content.replace(/\s+manifest=(?:'\s*|"\s*)?[^>]+(?:\s*'|\s*")?\s*/i,' ').replace(/<html\s*/i, '<html manifest="~/'+_path+'" ');
+              item.content= item.content.replace(/\s+manifest=(?:'\s*|"\s*)?[^>]+(?:\s*'|\s*")?\s*/i,' ').replace(/<html\s*/i, '<html manifest="/'+_path+'" ');
               File.write(item.path, item.content);
           });
 
